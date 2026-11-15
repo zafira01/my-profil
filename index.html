@@ -3,175 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil Adek</title>
+<meta name="description" content="Profil Zafira Ismi Samahiya, mahasiswa dan web developer yang sedang mendalami HTML, CSS, JavaScript, dan dunia engineering.">
+<title>Zafira Ismi Samahiya | Web Developer</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="sky" aria-hidden="true">
+    <span class="cloud c1"></span>
+    <span class="cloud c2"></span>
+    <span class="cloud c3"></span>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav-wrap">
+    <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="#beranda" class="brand" aria-label="Zafira, kembali ke atas">
+            <span class="brand-mark">Z</span>
+            <span class="brand-text">Zafira</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#beranda" class="active">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#perjalanan">Perjalanan</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#sertifikat">Sertifikat</a></li>
+            <li class="nav-cta-item"><a href="#kontak" class="nav-cta">Hubungi saya</a></li>
+            <span class="nav-pill" id="navPill" aria-hidden="true"></span>
+        </ul>
+
+        <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
 <!-- HERO -->
-<section class="hero">
-    <div class="overlay"></div>
+<section class="hero" id="beranda">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-wash"></div>
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <div class="sun" aria-hidden="true"></div>
 
     <div class="hero-content">
-        <h1>ZAFIRA ISMI SAMAHIYA</h1>
-        <p>Digital Innovator | Developer | Dreamer |</p>
+        <p class="hero-hello">Halo, saya</p>
+        <h1 class="hero-name">
+            <span class="line"><span>Zafira Ismi</span></span>
+            <span class="line"><span>Samahiya</span></span>
+        </h1>
+        <p class="hero-role">
+            <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero-lead">
+            Mahasiswa yang jatuh cinta pada dunia web, merangkai kode dan desain menjadi pengalaman yang rapi, hidup, dan enak dilihat.
+        </p>
+        <div class="hero-actions">
+            <a href="#project" class="btn btn-gold">Lihat project</a>
+            <a href="#tentang" class="btn btn-glass">Kenali saya</a>
+        </div>
     </div>
 
-    <!-- WAVES -->
-    <div class="waves">
-        <svg viewBox="0 0 1440 320">
-            <path fill="#0f2027" fill-opacity="1"
-            d="M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,149.3C1120,149,1280,203,1360,229.3L1440,256V320H0Z"></path>
-        </svg>
+    <a href="#tentang" class="scroll-cue" aria-label="Gulir ke bawah">
+        <span class="mouse"><i></i></span>
+        <span>Gulir</span>
+    </a>
+
+    <svg class="hero-wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,70 C240,130 480,10 720,60 C960,110 1200,20 1440,70 L1440,140 L0,140 Z"></path>
+    </svg>
+</section>
+
+<!-- TENTANG -->
+<section class="section" id="tentang">
+    <div class="wrap about">
+        <div class="portrait" data-reveal="left">
+            <div class="portrait-frame">
+                <img src="zafira.jpg.jpg" alt="Foto Zafira Ismi Samahiya" id="profileImg">
+            </div>
+            <div class="portrait-badge">
+                <strong>Web Developer</strong>
+                <span>Mahasiswa S1, Universitas Jabal Ghafur</span>
+            </div>
+            <span class="portrait-orbit" aria-hidden="true"></span>
+        </div>
+
+        <div class="about-text">
+            <h2 class="title" data-reveal>Merangkai ide menjadi website yang hidup</h2>
+
+            <p data-reveal style="--d:.08s">
+                Saya Zafira Ismi Samahiya, mahasiswa yang sedang menekuni dunia web development. Semuanya bermula dari rasa penasaran. Setelah mencoba satu baris kode dan melihat hasilnya muncul di layar, saya sadar bahwa inilah hal yang ingin saya dalami dengan serius.
+            </p>
+            <p data-reveal style="--d:.16s">
+                Saat ini saya sedang mempelajari HTML untuk membangun struktur, CSS untuk membentuk tampilan, dan JavaScript untuk menghidupkan interaksi. Bagi saya, coding bukan sekadar menghafal sintaks. Coding adalah cara berpikir: memecah masalah besar menjadi langkah kecil, lalu menyusunnya hingga bekerja dengan baik.
+            </p>
+            <p data-reveal style="--d:.24s">
+                Sebagai mahasiswa yang melangkah ke dunia engineering, saya belajar bahwa teknologi yang baik harus tepat guna, rapi, dan nyaman dipakai. Karena itu saya juga mendalami UI/UX, supaya setiap halaman yang saya buat bukan hanya berfungsi, tetapi juga terasa indah dan mudah digunakan.
+            </p>
+            <p data-reveal style="--d:.32s">
+                Saya belajar pelan-pelan tetapi konsisten. Harapan saya, kelak menjadi developer yang kuat secara teknis dan punya ciri khas di setiap karya. Semua ini masih proses, dan saya menikmati setiap langkahnya.
+            </p>
+
+            <ul class="facts" data-reveal style="--d:.4s">
+                <li><b>Fokus</b><span>Web development</span></li>
+                <li><b>Sedang dipelajari</b><span>HTML, CSS, JavaScript</span></li>
+                <li><b>Minat</b><span>UI/UX dan engineering</span></li>
+            </ul>
+        </div>
     </div>
 </section>
 
-<!-- PROFILE -->
-<section class="profile">
-    <div class="profile-box">
-        <img src="zafira.jpg" id="profileImg">
-        <h2>ZAFIRA ISMI SAMAHIYA</h2>
-        <p>Developer✨</p>
+<!-- KEAHLIAN -->
+<section class="section" id="keahlian">
+    <div class="wrap">
+        <div class="section-head" data-reveal>
+            <h2 class="title">Keahlian</h2>
+            <p>Tiga fondasi yang sedang terus saya asah setiap hari.</p>
+        </div>
+
+        <div class="skills">
+            <article class="skill glass" data-reveal style="--d:.05s" data-level="90">
+                <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+                <h3>HTML</h3>
+                <p>Menyusun struktur halaman yang semantik dan rapi.</p>
+                <div class="meter"><i></i></div>
+                <span class="pct">0%</span>
+            </article>
+
+            <article class="skill glass" data-reveal style="--d:.15s" data-level="85">
+                <div class="skill-icon" aria-hidden="true">{ }</div>
+                <h3>CSS</h3>
+                <p>Membentuk tampilan, layout responsif, dan animasi halus.</p>
+                <div class="meter"><i></i></div>
+                <span class="pct">0%</span>
+            </article>
+
+            <article class="skill glass" data-reveal style="--d:.25s" data-level="75">
+                <div class="skill-icon" aria-hidden="true">JS</div>
+                <h3>JavaScript</h3>
+                <p>Menghidupkan halaman dengan logika dan interaksi.</p>
+                <div class="meter"><i></i></div>
+                <span class="pct">0%</span>
+            </article>
+        </div>
+
+        <ul class="chips" data-reveal style="--d:.3s" aria-label="Sedang dipelajari">
+            <li>UI/UX Design</li>
+            <li>Responsive Design</li>
+            <li>Problem Solving</li>
+            <li>Berpikir Kreatif</li>
+            <li>Dasar Engineering</li>
+        </ul>
     </div>
 </section>
 
-<!-- CARD -->
-<section class="container">
+<!-- PERJALANAN -->
+<section class="section" id="perjalanan">
+    <div class="wrap">
+        <div class="section-head" data-reveal>
+            <h2 class="title">Perjalanan</h2>
+            <p>Pendidikan dan pengalaman yang membentuk saya.</p>
+        </div>
 
-<div class="card">
-<h2>Tentang Saya</h2>
-<p>
-Saya adalah seorang mahasiswa yang saat ini lagi fokus mendalami dunia web development. Awalnya cuma coba-coba karena penasaran, tapi makin ke sini malah jadi sesuatu yang saya nikmati banget. Saya lagi belajar dasar-dasar seperti HTML, CSS, dan JavaScript untuk membangun tampilan website yang nggak cuma berfungsi, tapi juga enak dilihat dan punya kesan aesthetic.
-
-Selain itu, saya juga tertarik ngulik desain UI/UX supaya website yang saya buat bisa nyaman dipakai dan punya pengalaman yang bagus buat user. Buat saya, belajar coding itu bukan cuma soal ngerti syntax, tapi juga soal gimana cara berpikir kreatif dan menyelesaikan masalah.
-
-Sekarang saya lagi terus upgrade skill, pelan-pelan tapi konsisten. Harapannya ke depan saya bisa jadi web developer yang nggak cuma jago secara teknis, tapi juga punya ciri khas dalam setiap karya yang saya buat. Dan yaa… semua ini masih proses, tapi saya lagi menikmati setiap langkahnya 🌊✨
-</p>
-</div>
-
-<div class="card">
-<h2>Pendidikan</h2>
-<ul>
-<li>S1- UNIVERSITAS JABAL GHAFUR</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Keahlian</h2>
-
-<div class="skill">
-<p>HTML</p>
-<div class="bar">
-<div class="fill html"></div>
-</div>
-</div>
-
-<div class="skill">
-<p>CSS</p>
-<div class="bar">
-<div class="fill css"></div>
-</div>
-</div>
-
-<div class="skill">
-<p>JavaScript</p>
-<div class="bar">
-<div class="fill js"></div>
-</div>
-</div>
-
-</div>
-
-<div class="card">
-<h2>Pengalaman</h2>
-<ul>
-<li>Magang di Bank Aceh</li>
-<li>Mengikuti Pelatihan Jurnalistik</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Sertifikat</h2>
-<div class="certifikat">
-<img src="sertifikat.jpg">
-<img src="sertifikat1.jpg">
-</div>
-</div>
-
-<!-- SPACE -->
-<div style="height:30px;"></div>
+        <ol class="timeline">
+            <li class="tl-item" data-reveal="left">
+                <span class="tl-dot"></span>
+                <div class="glass tl-card">
+                    <h3>S1, Universitas Jabal Ghafur</h3>
+                    <p>Mahasiswa yang mendalami web development dan dasar-dasar engineering.</p>
+                </div>
+            </li>
+            <li class="tl-item" data-reveal="right">
+                <span class="tl-dot"></span>
+                <div class="glass tl-card">
+                    <h3>Magang di Bank Aceh</h3>
+                    <p>Pengalaman langsung di lingkungan kerja profesional.</p>
+                </div>
+            </li>
+            <li class="tl-item" data-reveal="left">
+                <span class="tl-dot"></span>
+                <div class="glass tl-card">
+                    <h3>Pelatihan Jurnalistik untuk Pelajar SMK</h3>
+                    <p>21 sampai 24 Juni 2022 di Banda Aceh, diselenggarakan UPTD Balai Teknologi Komunikasi dan Informasi Pendidikan, Dinas Pendidikan Aceh.</p>
+                </div>
+            </li>
+            <li class="tl-item" data-reveal="right">
+                <span class="tl-dot"></span>
+                <div class="glass tl-card">
+                    <h3>SMKN 1 Sigli, Pidie</h3>
+                    <p>Pendidikan menengah kejuruan yang menjadi awal perjalanan saya.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
 
 <!-- PROJECT -->
-<div class="card">
-<h2>Project</h2>
+<section class="section" id="project">
+    <div class="wrap">
+        <div class="section-head" data-reveal>
+            <h2 class="title">Project</h2>
+            <p>Beberapa karya yang pernah saya bangun sambil belajar.</p>
+        </div>
 
-<div class="project-box">
+        <div class="projects">
+            <article class="project glass" data-reveal style="--d:.05s">
+                <div class="project-top"><span class="project-ico" aria-hidden="true">&#9654;</span></div>
+                <h3>Platform Video</h3>
+                <p>Website streaming video sederhana seperti Netflix dengan fitur putar video dan tampilan modern.</p>
+                <a href="https://zafira01.github.io/platfrom-video/" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Buka project</a>
+            </article>
 
-    <div class="project-card">
-        <h3>Platform Video</h3>
-        <p>Website streaming video sederhana seperti Netflix dengan fitur play video dan tampilan modern.</p>
-        
-        <a href="https://zafira01.github.io/platfrom-video/" target="_blank" class="btn">
-            View Project 🚀
-        </a>
+            <article class="project glass" data-reveal style="--d:.12s">
+                <div class="project-top"><span class="project-ico" aria-hidden="true">&#10022;</span></div>
+                <h3>New Project</h3>
+                <p>Website terbaru yang sedang saya kembangkan dengan tampilan yang lebih segar dan modern.</p>
+                <a href="https://zafira01.github.io/new-project/" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Buka project</a>
+            </article>
+
+            <article class="project glass" data-reveal style="--d:.19s">
+                <div class="project-top"><span class="project-ico" aria-hidden="true">&#9638;</span></div>
+                <h3>Broadcast Manual Dashboard</h3>
+                <p>Dashboard broadcast manual untuk mengelola pesan, kontak, campaign, dan memantau aktivitas secara terstruktur.</p>
+                <a href="https://zafira01.github.io/broadcast-manual/" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Buka project</a>
+            </article>
+
+            <article class="project glass" data-reveal style="--d:.26s">
+                <div class="project-top"><span class="project-ico" aria-hidden="true">&#9825;</span></div>
+                <h3>CURHAT-AI</h3>
+                <p>Website Ujian Akhir Semester berbasis web dengan desain modern, responsif, dan fitur yang mendukung kebutuhan pengguna.</p>
+                <a href="https://zafira01.github.io/curhatAI/" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Buka project</a>
+            </article>
+
+            <article class="project glass" data-reveal style="--d:.33s">
+                <div class="project-top"><span class="project-ico" aria-hidden="true">&#10003;</span></div>
+                <h3>Presensi Kelas</h3>
+                <p>Website presensi untuk mencatat kehadiran mahasiswa dengan lebih praktis, terstruktur, dan mudah digunakan.</p>
+                <a href="https://zafira01.github.io/Presensi-Kelas/" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Buka project</a>
+            </article>
+        </div>
     </div>
-
-	<div class="project-card">
-		<h3>New Project</h3>
-		<p>Website terbaru yang lagi adek kembangkan, tampilannya lebih fresh dan modern ✨</p>
-    
-		<a href="https://zafira01.github.io/new-project/" target="_blank" class="btn">
-			View Project 🚀
-		</a>
-	</div>
-	
-	 <div class="project-card">
-        <h3>Broadcast Manual Dashboard</h3>
-        <p>Dashboard broadcast manual dengan fitur pengelolaan pesan, kontak, campaign, dan monitoring aktivitas secara lebih terstruktur.</p>
-
-        <a href="https://zafira01.github.io/broadcast-manual/" target="_blank" class="btn">
-            View Project 🚀
-        </a>
-    </div>
-	
-	<div class="project-card">
-        <h3>CURHAT-AI</h3>
-        <p>Website Ujian Akhir Semester yang menampilkan implementasi sistem berbasis web
-        dengan desain modern, responsif, serta fitur yang mendukung kebutuhan pengguna.</p>
-
-        <a href="https://uas.infinityfreeapp.com/" target="_blank" class="btn">
-            View Project 🚀
-        </a>
-    </div>
-	
-	<div class="project-card">
-        <h3>Presensi Kelas</h3>
-        <p>Website Presensi Kelas untuk membantu proses pencatatan kehadiran mahasiswa secara lebih praktis, terstruktur dan mudah digunakan.</p>
-
-        <a href="https://zafira01.github.io/Presensi-Kelas/" target="_blank" class="btn">
-            View Project 🚀
-        </a>
-    </div>
-
-</div>
-</div> 
-<!-- SPACE -->
-<div style="height:30px;"></div>
-
-<div class="card">
-<h2>Kontak</h2>
-
-<div class="contact-box">
-    <p>📧 zafiraismy4@gmail.com</p>
-    <p>📱 082211611253</p>
-    <p>📸 @zf.ismy</p>
-</div>
-</div>
-
 </section>
+
+<!-- SERTIFIKAT -->
+<section class="section" id="sertifikat">
+    <div class="wrap">
+        <div class="section-head" data-reveal>
+            <h2 class="title">Sertifikat</h2>
+            <p>Klik gambar untuk melihat lebih besar.</p>
+        </div>
+
+        <div class="certs">
+            <button class="cert glass" data-reveal style="--d:.05s" data-src="sertifikat.jpg" data-alt="Sertifikat Pelatihan Jurnalistik untuk Pelajar SMK">
+                <img src="sertifikat.jpg.jpg" alt="Sertifikat Pelatihan Jurnalistik untuk Pelajar SMK" loading="lazy">
+                <span>Sertifikat Pelatihan Jurnalistik</span>
+            </button>
+            <button class="cert glass" data-reveal style="--d:.15s" data-src="sertifikat1.jpg" data-alt="Materi Pelatihan Jurnalistik untuk Pelajar SMK 2022">
+                <img src="sertifikat1.jpg.jpg" alt="Materi Pelatihan Jurnalistik untuk Pelajar SMK 2022" loading="lazy">
+                <span>Materi Pelatihan</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="section" id="kontak">
+    <div class="wrap">
+        <div class="contact glass" data-reveal>
+            <h2 class="title">Mari terhubung</h2>
+            <p>Punya ide, pertanyaan, atau ingin berkolaborasi? Saya senang mengobrol.</p>
+
+            <div class="contact-grid">
+                <a class="contact-item" href="mailto:zafiraismy4@gmail.com">
+                    <b>Email</b><span>zafiraismy4@gmail.com</span>
+                </a>
+                <a class="contact-item" href="https://wa.me/6282211611253" target="_blank" rel="noopener">
+                    <b>WhatsApp</b><span>082211611253</span>
+                </a>
+                <a class="contact-item" href="https://instagram.com/zf.ismy" target="_blank" rel="noopener">
+                    <b>Instagram</b><span>@zf.ismy</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Zafira Ismi Samahiya. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+    <a href="#beranda" class="to-top" aria-label="Kembali ke atas">&uarr;</a>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau sertifikat" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Tutup">&times;</button>
+    <img src="" alt="" id="lbImg">
+</div>
 
 <script src="script.js"></script>
 </body>
